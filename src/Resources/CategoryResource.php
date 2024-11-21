@@ -6,6 +6,7 @@ use Filament\Forms\Form;
 use Filament\Infolists\Components\Section;
 use Filament\Infolists\Components\TextEntry;
 use Filament\Infolists\Infolist;
+use Filament\Resources\Concerns\Translatable;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -14,6 +15,8 @@ use Firefly\FilamentBlog\Resources\CategoryResource\RelationManagers\PostsRelati
 
 class CategoryResource extends Resource
 {
+    use Translatable;
+
     protected static ?string $model = Category::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-squares-plus';
