@@ -8,6 +8,8 @@ use Filament\Actions;
 
 class CreateCategory extends CreateRecord
 {
+    use CreateRecord\Concerns\Translatable;
+
     protected static string $resource = CategoryResource::class;
 
     protected function getHeaderActions(): array

@@ -8,6 +8,8 @@ use Firefly\FilamentBlog\Resources\CategoryResource;
 
 class ListCategories extends ListRecords
 {
+    use ListRecords\Concerns\Translatable;
+    
     protected static string $resource = CategoryResource::class;
 
     protected function getHeaderActions(): array

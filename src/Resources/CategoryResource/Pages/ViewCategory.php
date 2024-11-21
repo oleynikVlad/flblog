@@ -9,6 +9,8 @@ use Firefly\FilamentBlog\Resources\CategoryResource;
 
 class ViewCategory extends ViewRecord
 {
+    use ViewRecord\Concerns\Translatable;
+
     protected static string $resource = CategoryResource::class;
 
     public function getHeaderActions(): array
