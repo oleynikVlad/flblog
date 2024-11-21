@@ -15,6 +15,12 @@
             "email": "asmit@thefireflytech.com",
             "homepage": "https://github.com/asmit-firefly",
             "role": "Developer"
+        },
+        {
+            "name": "Oleynik Vlad",
+            "email": "oleynikprog@gmail.com",
+            "homepage": "https://github.com/oleynikVlad/flblog",
+            "role": "Developer"
         }
     ],
     "require": {
