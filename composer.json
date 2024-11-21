@@ -1,21 +1,16 @@
 {
-    "name": "oleynik/filament-blog",
+    "name": "oleynik/oleynik-blog",
     "type": "library",
     "description": "An advance blog package for Filament Admin Panel",
     "keywords": [
         "filament",
         "laravel",
         "blog",
-        "firefly"
+        "firefly",
+        "oleynik"
     ],
     "license": "MIT",
     "authors": [
-        {
-            "name": "Asmit Nepali",
-            "email": "asmit@thefireflytech.com",
-            "homepage": "https://github.com/asmit-firefly",
-            "role": "Developer"
-        },
         {
             "name": "Oleynik Vlad",
             "email": "oleynikprog@gmail.com",
