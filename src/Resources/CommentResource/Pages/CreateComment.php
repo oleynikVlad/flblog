@@ -4,6 +4,7 @@ namespace Firefly\FilamentBlog\Resources\CommentResource\Pages;
 
 use Filament\Resources\Pages\CreateRecord;
 use Firefly\FilamentBlog\Resources\CommentResource;
+use Filament\Actions;
 
 class CreateComment extends CreateRecord
 {
