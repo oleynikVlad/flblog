@@ -16,7 +16,6 @@ class CreateCategory extends CreateRecord
     {
         return [
             Actions\LocaleSwitcher::make(),
-            // ...
         ];
     }
 }

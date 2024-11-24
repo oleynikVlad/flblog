@@ -7,5 +7,14 @@ use Firefly\FilamentBlog\Resources\CommentResource;
 
 class CreateComment extends CreateRecord
 {
+    use CreateRecord\Concerns\Translatable;
+
     protected static string $resource = CommentResource::class;
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\LocaleSwitcher::make(),
+        ];
+    }
 }

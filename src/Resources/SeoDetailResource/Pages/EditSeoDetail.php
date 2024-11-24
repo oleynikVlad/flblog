@@ -8,12 +8,15 @@ use Firefly\FilamentBlog\Resources\SeoDetailResource;
 
 class EditSeoDetail extends EditRecord
 {
+    use EditRecord\Concerns\Translatable;
+
     protected static string $resource = SeoDetailResource::class;
 
     protected function getHeaderActions(): array
     {
         return [
             Actions\DeleteAction::make(),
+            Actions\LocaleSwitcher::make(),
         ];
     }
 }

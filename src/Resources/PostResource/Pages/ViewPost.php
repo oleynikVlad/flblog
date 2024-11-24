@@ -8,9 +8,12 @@ use Firefly\FilamentBlog\Events\BlogPublished;
 use Firefly\FilamentBlog\Models\Post;
 use Firefly\FilamentBlog\Resources\PostResource;
 use Illuminate\Contracts\Support\Htmlable;
+use Filament\Actions;
 
 class ViewPost extends ViewRecord
 {
+    use ViewRecord\Concerns\Translatable;
+
     protected static string $resource = PostResource::class;
 
     public function getTitle(): string|Htmlable
@@ -23,6 +26,7 @@ class ViewPost extends ViewRecord
     protected function getHeaderActions(): array
     {
         return [
+            Actions\LocaleSwitcher::make(),
             Action::make('sendNotification')
                 ->label('Send Notification')
                 ->requiresConfirmation()
@@ -41,6 +45,7 @@ class ViewPost extends ViewRecord
                 ->disabled(function (Post $record) {
                     return $record->isNotPublished();
                 }),
+
         ];
     }
 }

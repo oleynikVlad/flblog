@@ -11,6 +11,8 @@ use Firefly\FilamentBlog\Resources\SeoDetailResource;
 
 class CreatePost extends CreateRecord
 {
+    use CreateRecord\Concerns\Translatable;
+
     protected static string $resource = PostResource::class;
 
     //    protected function mutateFormDataBeforeCreate(array $data): array
@@ -37,5 +39,12 @@ class CreatePost extends CreateRecord
     protected function getRedirectUrl(): string
     {
         return SeoDetailResource::getUrl('create', ['post_id' => $this->record->id]);
+    }
+
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\LocaleSwitcher::make(),
+        ];
     }
 }

@@ -19,6 +19,7 @@ class ViewCategory extends ViewRecord
             EditAction::make()
                 ->slideOver()
                 ->form(Category::getForm()),
+            Actions\LocaleSwitcher::make(),
         ];
     }
 }
